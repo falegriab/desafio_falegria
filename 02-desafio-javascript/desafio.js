@@ -226,18 +226,19 @@ function calculoMatematico(operacion, numero1, numero2) {
  *? Validar al inicio de la función que el número sea positivo. De lo contrario retornar la frase "El número ingresado debe ser mayor a 0"
  *? Ayuda: usar ciclo while y recordar el método "push" para ir agregando valores al arreglo
  */
-
+var arrayNum = new Array;
 function cargarArreglo(numero) {
   var numDoble=numero*2;
-  var arrayNum=[]};
-  var i=0;
-  while(numero!=numDoble){
-    arrayNum.push(numero);
-    console.log("Numero agregado a arreglo ="+arrayNum[i]);
-    console.log("Arreglo actual ="+arrayNum.toString());
-    i++;
+  if(numero>0){
+    while(numero!=numDoble){
+      arrayNum.push(numero);
+      break;
+    }
+    console.log("Arreglo final ="+arrayNum);
+    return arrayNum;
+  }else{
+    console.log("El número ingresado debe ser mayor a 0");
   }
-  console.log("Arreglo final ="+arrayNum.toString());
 }
 //! =======================================================================================================================================================
 
@@ -465,7 +466,14 @@ function verificarCantidadEmpleados(objetoFijo = {}, cantidad) {
  *?
  */
 
-function verificarClave(objeto = {}, clave) {}
+function verificarClave(objeto = {}, clave) {
+  var validaFlag=false;
+  if(objeto.hasOwnProperty(clave)){
+    console.log("La clave "+clave+" esta presente en el objeto.");
+    validaFlag=true;
+  }
+  return validaFlag;
+}
 //! =======================================================================================================================================================
 
 /**
@@ -473,4 +481,15 @@ function verificarClave(objeto = {}, clave) {}
  *? Recordatorio: al inicio hay un arreglo de numeros reales como ejemplo.
  */
 
-function quitarParteDecimal(arregloNumerosReales = []) {}
+function quitarParteDecimal(numerosReales = []) {
+  var lenArrayFijo=numerosReales.length;
+  var arraySinDecimal= [];
+  var numSinDecimal=0;
+
+  for (let i = 0; i < lenArrayFijo; i++) {
+    numSinDecimal=Math.trunc(numerosReales[i]);
+    console.log("Numero antes del cambio:"+numerosReales[i]+" .Nuevo valor modificado sin decimal: "+numSinDecimal);
+    arraySinDecimal.push(numSinDecimal);
+  }
+return arraySinDecimal;
+}
