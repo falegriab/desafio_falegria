@@ -12,7 +12,7 @@
 
 ## Éxitos a todos!
 
-## Comentarios desafio
+## Comentarios desafio e-contact
 Hola Facundo,
 Junto con saludarte, primero agradecer tus clases, que me han servido para aprender conceptos nuevos y confirmar otros que ya conocia.
 Respecto al desafio, no logre avanzar con la primera parte, pero si complete la 2da de javascript.
